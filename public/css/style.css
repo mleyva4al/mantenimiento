@@ -1,0 +1,218 @@
+/* public/css/style.css (Versión Universidad de Colima) */
+
+/* ---------------------------------- */
+/* 1. Variables y Configuración Global
+/* ---------------------------------- */
+:root {
+    /* Paleta Institucional UdeC */
+    --udec-verde: #006241;       /* Verde Loro oficial */
+    --udec-verde-oscuro: #004a32; /* Para hover */
+    --udec-oro: #FDBB30;         /* Oro oficial */
+    --udec-oro-ring: rgba(253, 187, 48, 0.25); /* Resplandor del foco */
+
+    /* Neutros */
+    --light-gray: #f8f9fa;
+    --border-color: #dee2e6;
+    --text-color: #212529;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --radius: 8px;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ---------------------------------- */
+/* 2. Navegación (Navbar)
+/* ---------------------------------- */
+.navbar {
+    background-color: #fff;
+    box-shadow: var(--shadow);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--udec-verde); /* Borde verde institucional */
+}
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius);
+    transition: background-color 0.2s ease;
+}
+.navbar a:hover {
+    background-color: var(--light-gray);
+}
+.navbar .nav-logo a {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--udec-verde); /* Logo en Verde */
+}
+.navbar .nav-logo a:hover {
+    background-color: transparent;
+}
+.navbar .nav-links span {
+    margin-right: 15px;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+/* ---------------------------------- */
+/* 3. Contenedor Principal y Títulos
+/* ---------------------------------- */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--udec-oro); /* Detalle Oro */
+}
+
+/* Títulos principales con el color institucional */
+h2 {
+    color: var(--udec-verde);
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 0.5rem;
+}
+h3 {
+    color: #333;
+    font-weight: 500;
+}
+
+
+/* ---------------------------------- */
+/* 4. Formularios (El gran cambio)
+/* ---------------------------------- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+form label {
+    font-weight: 600;
+    margin-bottom: -0.5rem;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto "Focus" con el ORO institucional */
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="date"]:focus,
+form select:focus,
+form textarea:focus {
+    outline: 0;
+    border-color: var(--udec-oro);
+    box-shadow: 0 0 0 0.2rem var(--udec-oro-ring);
+}
+
+form textarea {
+    height: 140px;
+    resize: vertical;
+}
+
+/* Botón principal en VERDE UdeC */
+form button {
+    background-color: var(--udec-verde);
+    color: white;
+    padding: 0.9rem;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+form button:hover {
+    background-color: var(--udec-verde-oscuro);
+}
+
+/* ---------------------------------- */
+/* 5. Login
+/* ---------------------------------- */
+.login-container {
+    max-width: 450px;
+    margin: 5rem auto;
+    padding: 2.5rem;
+    background-color: #fff;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--udec-verde); /* Borde verde en Login */
+}
+.login-container h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+.error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 1rem;
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+/* ---------------------------------- */
+/* 6. Varios (Tabla y Footer)
+/* ---------------------------------- */
+.dataTables_wrapper {
+    font-family: inherit;
+    margin-top: 1.5rem;
+}
+
+#tabla_general a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 4px;
+    transition: opacity 0.2s ease;
+}
+#tabla_general a:hover {
+    opacity: 0.6;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem 0;
+    color: #888;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}
+/* Corrección visual para input[type=email] */
+form input[type="email"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input[type="email"]:focus {
+    outline: 0;
+    border-color: var(--udec-oro);
+    box-shadow: 0 0 0 0.2rem var(--udec-oro-ring);
+}

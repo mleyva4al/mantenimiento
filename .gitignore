@@ -1,0 +1,20 @@
+# Configuración sensible
+config/db.php
+
+# Dependencias de PHP (Composer)
+vendor/
+
+# Archivos subidos por usuarios
+uploads/
+
+# Archivos temporales / editor
+*.swp
+*.swo
+*.save
+
+# Logs
+*.log
+
+# Sistema
+.DS_Store
+
